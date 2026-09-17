@@ -1,0 +1,53 @@
+roles:
+  - name: "Admin"
+    permissions:
+      manage_guild: true
+      manage_channels: true
+      manage_roles: true
+      manage_messages: true
+      manage_threads: true
+      moderate_members: true
+      view_audit_log: true
+  - name: "Moderator"
+    permissions:
+      manage_messages: true
+      manage_threads: true
+      moderate_members: true
+      view_audit_log: true
+  - name: "District Crew"
+    permissions:
+      manage_threads: true
+  - name: "Member"
+    permissions: {}
+  - name: "Newcomer"
+    permissions: {}
+
+categories:
+  - name: "START HERE"
+    channels:
+      - {name: "welcome", type: "text"}
+      - {name: "rules", type: "text"}
+      - {name: "announcements", type: "text"}
+      - {name: "saran-kritik", type: "forum"}
+
+  - name: "THE DISTRICT"
+    channels:
+      - {name: "general", type: "text"}
+      - {name: "random", type: "text"}
+      - {name: "media", type: "text"}
+      - {name: "introduce-yourself", type: "text"}
+      - {name: "Zero Room", type: "voice"}
+      - {name: "Late Night", type: "voice"}
+      - {name: "AFK", type: "voice"}
+
+  - name: "ACTIVITIES"
+    channels:
+      - {name: "events", type: "text"}
+      - {name: "looking-for-group", type: "text"}
+
+  - name: "SYSTEM"
+    private: true
+    channels:
+      - {name: "zero-log", type: "text"}
+      - {name: "mod-queue", type: "text"}
+      - {name: "continuity-room", type: "text"}

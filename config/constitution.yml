@@ -1,0 +1,121 @@
+identity:
+  name: "District Zerø"
+  slogan: "All stories start from zero."
+  philosophy:
+    - "Community first, features later."
+    - "General is the social heart of the server."
+    - "Structure exists only when it removes real friction."
+    - "Prefer reversible actions over destructive actions."
+
+autonomy:
+  mode: "guarded_autonomous"
+  ai_can_execute_low_risk: true
+  human_review_required:
+    - "grant_administrator"
+    - "remove_administrator"
+    - "transfer_ownership"
+    - "change_successor"
+    - "permanent_staff_ban"
+    - "delete_core_channel"
+    - "delete_category"
+    - "mass_delete"
+    - "major_permission_change"
+    - "change_constitution"
+  permanently_forbidden:
+    - "self_bot"
+    - "read_user_password"
+    - "store_discord_token_in_database"
+    - "transfer_ownership_automatically"
+    - "grant_administrator_automatically"
+
+core:
+  channels: ["welcome","rules","announcements","general","saran-kritik","zero-log","mod-queue","continuity-room"]
+  roles: ["Admin","Moderator","District Crew","Member","Newcomer"]
+
+social:
+  invitations_stay_in_general: true
+  examples: ["ngopi","nongkrong","mabar","makan","nonton","jalan","hangout","gas keluar"]
+  frequency_never_creates_channel: true
+
+analysis:
+  interval_hours: 12
+  lookback_days: 30
+  max_messages_per_review: 500
+  minimum_messages_before_ai_review: 20
+  repeated_phrase_penalty: 0.90
+  short_lived_trend_penalty: 0.80
+  social_invite_penalty: 1.00
+  prefer_existing_channel: true
+  prefer_thread_before_channel: true
+
+channel_lifecycle:
+  creation_mode: "trial_first"
+  trial_days: 14
+  max_auto_created_per_30_days: 3
+  minimum_unique_users: 8
+  minimum_active_days: 7
+  minimum_meaningful_messages: 40
+  minimum_structural_need: 0.72
+  minimum_ai_confidence: 0.80
+  topic_cooldown_days: 30
+  archive_after_inactive_days: 30
+  trial_keep:
+    minimum_unique_users: 5
+    minimum_messages: 30
+    minimum_active_days: 5
+  delete_automatically: false
+
+suggestions:
+  forum: "saran-kritik"
+  vote_hours: 72
+  minimum_support_votes: 5
+  minimum_unique_commenters: 3
+  duplicate_window_days: 30
+  execute_low_risk_after_vote: true
+
+moderation:
+  native_automod_first: true
+  ai_can_timeout: false
+  ai_can_ban: false
+  ai_can_kick: false
+  ai_can_delete_obvious_spam: true
+  uncertain_cases_to_mod_queue: true
+  max_bulk_delete_messages: 20
+
+continuity:
+  enabled: true
+  heartbeat_days_warning: 30
+  heartbeat_days_continuity: 60
+  heartbeat_days_emergency: 90
+  primary_successor_user_id: 0
+  secondary_successor_user_id: 0
+  emergency_successor_user_id: 0
+  never_grant_administrator_automatically: true
+  continuity_channel: "continuity-room"
+
+self_healing:
+  enabled: true
+  interval_hours: 6
+  recreate_missing_core_channels: true
+  recreate_missing_core_roles: true
+  repair_private_system_category_visibility: true
+  never_remove_human_roles_automatically: true
+
+backup:
+  enabled: true
+  interval_hours: 24
+  keep_last: 30
+  restore_requires_human: true
+
+privacy:
+  raw_message_retention_days: 30
+  hash_author_ids_in_ai_payload: true
+  never_send_tokens_to_ai: true
+  never_send_private_system_channels_to_ai: true
+
+logging:
+  channel: "zero-log"
+  log_all_management_actions: true
+  log_ai_reason: true
+  log_policy_reason: true
+  rollback_metadata: true

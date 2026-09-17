@@ -1,0 +1,23 @@
+welcome:
+  title: "Welcome to District Zerø."
+  body: |
+    Semua cerita dimulai dari nol.
+
+    Baca #rules, kenalan kalau mau, lalu langsung masuk ke #general.
+    Tidak ada sistem rumit yang harus kamu pahami untuk menjadi bagian dari sini.
+
+rules:
+  - "Hormati orang lain. Serang argumen, bukan pribadi."
+  - "Dilarang spam, scam, phishing, doxxing, atau menyebarkan data pribadi."
+  - "Konten ilegal dan eksploitasi seksual dilarang."
+  - "Jangan mengganggu percakapan secara sengaja atau melakukan raid."
+  - "Gunakan channel sesuai fungsi, tetapi obrolan sosial spontan tetap boleh hidup di #general."
+  - "Promosi dan invite komunitas lain mengikuti izin staff."
+  - "Keputusan moderasi dapat diajukan ulang melalui staff."
+  - "Staff dapat bertindak untuk menjaga keselamatan dan fungsi komunitas."
+
+continuity_notice: |
+  Continuity Mode aktif karena heartbeat founder telah melewati batas.
+  Sistem rutin tetap berjalan. Successor yang sudah ditentukan diberi panduan
+  untuk menjaga operasional; ZeroCore tidak memindahkan ownership atau memberi
+  Administrator secara otomatis.
